@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+body {
+   margin: 0;
+   font-family:
+      -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   background: linear-gradient(135deg, #e3f0ff 0%, #c7dfff 100%);
+   min-height: 100vh;
+}
+
+/* Custom styles for React Flow */
+.database-flow {
+   background: linear-gradient(135deg, #f5faff 0%, #e0f0ff 100%);
+}
+
+/* Override React Flow default styles for better appearance */
+.react-flow__node {
+   border-radius: 8px;
+   background: #f0f6ff;
+   border: 2px solid #b3d1f7;
+}
+
+.react-flow__edge-path {
+   stroke-width: 2;
+   stroke: #90b4e6;
+}
+
+.react-flow__edge.selected .react-flow__edge-path {
+   stroke: #4f8edc;
+   stroke-width: 3;
+}
+
+.react-flow__controls {
+   background: rgba(240, 246, 255, 0.95);
+   border-radius: 8px;
+   border: 1px solid #b3d1f7;
+   box-shadow: 0 4px 6px -1px rgba(144, 180, 230, 0.12);
+}
+
+/* Loading animation for smooth transitions */
+@keyframes fadeIn {
+   from {
+      opacity: 0;
+      transform: translateY(10px);
+   }
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+.database-node-enter {
+   animation: fadeIn 0.3s ease-out;
+}
+
+/* Responsive design helpers */
+@media (max-width: 768px) {
+   .database-flow .react-flow__controls {
+      transform: scale(0.9);
+   }
+
+   .react-flow__minimap {
+      width: 100px !important;
+      height: 80px !important;
+   }
+}
