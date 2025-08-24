@@ -17,6 +17,18 @@ export default function Flow() {
    const allNodes = useMemo(() => getAllNodes(), []);
    const allEdges = useMemo(() => generateEdges(), []);
 
+   const reactFlowNodes = useMemo(() => {
+      return allNodes.map((node) => ({
+         id: node.id,
+         // type: node.type,
+         position: node.position,
+         data: {
+            ...node,
+            // onClick: handleNodeClick, // Pass our click handler to each node
+         },
+      }));
+   }, [allNodes]);
+
    return (
       <div className="w-full h-full">
          <Box sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
@@ -30,7 +42,10 @@ export default function Flow() {
             >
                <FiltersPanel />
                <Box sx={{ width: "100%", height: "100%" }}>
-                  <ReactFlow proOptions={{ hideAttribution: true }}>
+                  <ReactFlow
+                     nodes={reactFlowNodes}
+                     proOptions={{ hideAttribution: true }}
+                  >
                      <MiniMap />
                      <Controls />
                      <Background />

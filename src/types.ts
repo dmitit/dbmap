@@ -15,7 +15,6 @@ export interface DatabaseNode extends BaseNode {
    description: string;
    keyFeatures: string[];
    useCases: string[];
-   companies: string[];
    officialLink: string;
    tutorialLink?: string;
    parentCategory: string; // ID of the parent category node

@@ -2,14 +2,12 @@ import {
    Box,
    Chip,
    FormControl,
-   GridLegacy as Grid,
    InputAdornment,
    InputLabel,
    MenuItem,
    Paper,
    Select,
    TextField,
-   Typography,
 } from "@mui/material";
 import { Filter, FunnelX, SearchIcon } from "lucide-react";
 import { parseAsArrayOf, parseAsString, useQueryState } from "nuqs";
