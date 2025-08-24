@@ -17,23 +17,6 @@ body {
    background: linear-gradient(135deg, #f5faff 0%, #e0f0ff 100%);
 }
 
-/* Override React Flow default styles for better appearance */
-.react-flow__node {
-   border-radius: 8px;
-   background: #f0f6ff;
-   border: 2px solid #b3d1f7;
-}
-
-.react-flow__edge-path {
-   stroke-width: 2;
-   stroke: #90b4e6;
-}
-
-.react-flow__edge.selected .react-flow__edge-path {
-   stroke: #4f8edc;
-   stroke-width: 3;
-}
-
 .react-flow__controls {
    background: rgba(240, 246, 255, 0.95);
    border-radius: 8px;
@@ -51,10 +34,6 @@ body {
       opacity: 1;
       transform: translateY(0);
    }
-}
-
-.database-node-enter {
-   animation: fadeIn 0.3s ease-out;
 }
 
 /* Responsive design helpers */
