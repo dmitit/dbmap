@@ -11,7 +11,7 @@ export const CategoryNode: React.FC<NodeProps<CategoryData>> = (options) => {
          <Handle
             type="target"
             position={Position.Top}
-            // style={{ background: "transparent", border: "none" }}
+            style={{ background: "transparent", border: "none" }}
          />
 
          <Card
@@ -54,7 +54,11 @@ export const CategoryNode: React.FC<NodeProps<CategoryData>> = (options) => {
             </CardContent>
          </Card>
 
-         <Handle type="source" position={Position.Bottom} />
+         <Handle
+            type="source"
+            position={Position.Bottom}
+            style={{ background: "transparent", border: "none" }}
+         />
       </>
    );
 };

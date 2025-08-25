@@ -12,7 +12,7 @@ export const DatabaseNode: React.FC<NodeProps<DatabaseData>> = (options) => {
          <Handle
             type="target"
             position={Position.Top}
-            // style={{ background: "transparent", border: "none" }}
+            style={{ background: "transparent", border: "none" }}
          />
 
          <Card
@@ -63,7 +63,11 @@ export const DatabaseNode: React.FC<NodeProps<DatabaseData>> = (options) => {
             </CardContent>
          </Card>
 
-         <Handle type="source" position={Position.Bottom} />
+         <Handle
+            type="source"
+            position={Position.Bottom}
+            style={{ background: "transparent", border: "none" }}
+         />
       </>
    );
 };

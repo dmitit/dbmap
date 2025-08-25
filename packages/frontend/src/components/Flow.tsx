@@ -133,6 +133,7 @@ export default function Flow() {
                   </ReactFlow>
                </Box>
             </Box>
+
             <DatabaseDrawer
                open={drawerOpen}
                onClose={handleDrawerClose}
