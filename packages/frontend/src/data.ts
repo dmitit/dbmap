@@ -1904,31 +1904,3 @@ export const mockNodes: FlowNode[] = [
       },
    },
 ];
-
-// Define the connections between nodes (parent-child relationships)
-export const mockEdges: FlowEdge[] = [
-   // Root to main categories
-   { id: "root-sql", source: "root", target: "sql-category" },
-   { id: "root-nosql", source: "root", target: "nosql-category" },
-   { id: "root-specialized", source: "root", target: "specialized-category" },
-
-   // SQL category to SQL databases
-   { id: "sql-postgresql", source: "sql-category", target: "postgresql" },
-   { id: "sql-mysql", source: "sql-category", target: "mysql" },
-
-   // NoSQL category to NoSQL databases
-   { id: "nosql-mongodb", source: "nosql-category", target: "mongodb" },
-   { id: "nosql-redis", source: "nosql-category", target: "redis" },
-
-   // Specialized category to specialized databases
-   {
-      id: "specialized-elasticsearch",
-      source: "specialized-category",
-      target: "elasticsearch",
-   },
-   {
-      id: "specialized-influxdb",
-      source: "specialized-category",
-      target: "influxdb",
-   },
-];

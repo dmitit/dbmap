@@ -15,7 +15,12 @@ export const DatabaseNode: React.FC<NodeProps<DatabaseData>> = (options) => {
             // style={{ background: "transparent", border: "none" }}
          />
 
-         <Card sx={{ maxWidth: 250, cursor: "pointer" }}>
+         <Card
+            sx={{
+               maxWidth: 250,
+               cursor: options.dragging ? "grabbing" : "pointer",
+            }}
+         >
             <CardContent>
                <Box display="flex" alignItems="center" gap={1} mb={1}>
                   <Database />
