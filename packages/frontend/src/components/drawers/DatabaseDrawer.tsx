@@ -7,14 +7,14 @@ import {
    Typography,
 } from "@mui/material";
 import { CalendarIcon, CircleX, Database } from "lucide-react";
-import { DatabaseNode } from "../nodes/DatabaseNode";
 import { type Node } from "reactflow";
+import { DatabaseData } from "../../types";
 
 // Props interface for our drawer component
 interface DatabaseDrawerProps {
    open: boolean;
    onClose: () => void;
-   selectedNode: Node<DatabaseNode> | null;
+   selectedNode: Node<DatabaseData> | null;
 }
 
 const DatabaseDrawer: React.FC<DatabaseDrawerProps> = ({

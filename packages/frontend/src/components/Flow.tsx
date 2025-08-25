@@ -13,7 +13,6 @@ import FiltersPanel from "./FiltersPanel";
 import { parseAsArrayOf, parseAsString, useQueryState } from "nuqs";
 import { nodeTypes } from "./nodes";
 import DatabaseDrawer from "./drawers/DatabaseDrawer";
-import { CategoryNode, DatabaseNode } from "../types";
 import { createEdges } from "../services/createEdges";
 import { StrapiApiService } from "../api/service";
 import { transformStrapiResponse } from "../services/transformToFlow";
