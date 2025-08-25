@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_cards_categories",
+  "info": {
+    "displayName": "Category"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

@@ -1,8 +1,6 @@
 // Mock data representing a subset of your database hierarchy
 // This creates a manageable demo version while maintaining the structure
 
-import type { FlowEdge, FlowNode } from "./types";
-
 export const mockNodes: FlowNode[] = [
    {
       id: "root",
@@ -1934,45 +1932,3 @@ export const mockEdges: FlowEdge[] = [
       target: "influxdb",
    },
 ];
-
-// Helper function to get all available categories for filtering
-export const getAvailableCategories = (): string[] => {
-   const categories = new Set<string>();
-
-   mockNodes.forEach((node) => {
-      if (node.data.type === "database") {
-         categories.add(node.data.category);
-      }
-   });
-
-   return Array.from(categories).sort();
-};
-
-// Helper function to filter nodes based on search term and categories
-export const filterNodes = (
-   nodes: FlowNode[],
-   searchTerm: string,
-   categoryFilters: string[],
-): FlowNode[] => {
-   return nodes.filter((node) => {
-      // Always include category nodes to maintain structure
-      if (node.data.type === "category") {
-         return true;
-      }
-
-      const database = node.data as any; // We know it's a DatabaseNode
-
-      // Apply search filter
-      const matchesSearch =
-         searchTerm === "" ||
-         database.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-         database.description.toLowerCase().includes(searchTerm.toLowerCase());
-
-      // Apply category filter
-      const matchesCategory =
-         categoryFilters.length === 0 ||
-         categoryFilters.includes(database.category);
-
-      return matchesSearch && matchesCategory;
-   });
-};

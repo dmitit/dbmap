@@ -1,37 +1,22 @@
-export interface FlowNode {
-   id: string;
-   type: "database" | "category";
-   position: { x: number; y: number };
-   data: DatabaseNode | CategoryNode;
+import { type Node } from "reactflow";
+
+export interface DatabaseData {
+   title: string;
+   description: string;
+   creation_year: number;
 }
 
-export type Category = "sql" | "nosql" | "specialized";
-
-interface BaseNodeData {
-   name: string;
+export interface CategoryData {
+   title: string;
    description: string;
 }
 
-export interface DatabaseNode extends BaseNodeData {
-   type: "database";
-   year?: number;
-   category: string;
-   features?: string[];
-   useCases?: string[];
-   officialDocs?: string;
-   logo?: string;
-}
-
-// Category node data (for grouping databases)
-export interface CategoryNode extends BaseNodeData {
+export interface CategoryNode extends Node {
    type: "category";
-   timeframe?: string;
+   nodes: string[];
 }
 
-// Edge connections between nodes
-export interface FlowEdge {
-   id: string;
-   source: string;
-   target: string;
-   type?: string;
+export interface DatabaseNode extends Node {
+   type: "database";
+   data: DatabaseData;
 }

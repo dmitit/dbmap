@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_cards_databases",
+  "info": {
+    "displayName": "Database"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "creation_year": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}
