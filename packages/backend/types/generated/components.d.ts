@@ -19,7 +19,10 @@ export interface CardsDatabase extends Struct.ComponentSchema {
   attributes: {
     creation_year: Schema.Attribute.Integer;
     description: Schema.Attribute.Text;
+    features: Schema.Attribute.JSON;
+    official_docs: Schema.Attribute.String;
     title: Schema.Attribute.String;
+    use_cases: Schema.Attribute.JSON;
   };
 }
 

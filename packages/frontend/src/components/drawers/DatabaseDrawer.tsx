@@ -1,12 +1,24 @@
 import {
    Avatar,
    Box,
+   Button,
    Drawer,
    IconButton,
+   List,
+   ListItem,
+   ListItemIcon,
+   ListItemText,
    Paper,
    Typography,
 } from "@mui/material";
-import { CalendarIcon, CircleX, Database } from "lucide-react";
+import {
+   CalendarIcon,
+   CircleX,
+   Database,
+   Rocket,
+   ToolCase,
+   Wrench,
+} from "lucide-react";
 import { type Node } from "reactflow";
 import { DatabaseData } from "../../types";
 
@@ -120,7 +132,7 @@ const DatabaseDrawer: React.FC<DatabaseDrawerProps> = ({
                </Box>
 
                {/* Key features section */}
-               {/* {database.features && database.features.length > 0 && (
+               {database.features && database.features.length > 0 && (
                   <Box mb={3}>
                      <Typography
                         variant="h6"
@@ -143,10 +155,10 @@ const DatabaseDrawer: React.FC<DatabaseDrawerProps> = ({
                         ))}
                      </List>
                   </Box>
-               )} */}
+               )}
 
                {/* Use cases section */}
-               {/* {database.useCases && database.useCases.length > 0 && (
+               {database.useCases && database.useCases.length > 0 && (
                   <Box mb={3}>
                      <Typography
                         variant="h6"
@@ -169,10 +181,10 @@ const DatabaseDrawer: React.FC<DatabaseDrawerProps> = ({
                         ))}
                      </List>
                   </Box>
-               )} */}
+               )}
 
                {/* Documentation link */}
-               {/* {database.officialDocs && (
+               {database.officialDocs && (
                   <Box>
                      <Button
                         variant="contained"
@@ -186,7 +198,7 @@ const DatabaseDrawer: React.FC<DatabaseDrawerProps> = ({
                         View Official Documentation
                      </Button>
                   </Box>
-               )} */}
+               )}
             </Box>
          </Box>
       </Drawer>

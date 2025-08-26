@@ -17,6 +17,7 @@ import { createEdges } from "../services/createEdges";
 import { StrapiApiService } from "../api/service";
 import { transformStrapiResponse } from "../services/transformToFlow";
 import { toast } from "sonner";
+import CategoryDrawer from "./drawers/CategoryDrawer";
 
 export default function Flow() {
    const [selectedNode, setSelectedNode] = useState<Node | null>(null);
@@ -71,7 +72,6 @@ export default function Flow() {
 
    const handleNodeClick = useCallback(
       (event: React.MouseEvent, node: Node) => {
-         console.log(node);
          event.stopPropagation();
          setSelectedNode(node);
          setDrawerOpen(true);
@@ -134,11 +134,20 @@ export default function Flow() {
                </Box>
             </Box>
 
-            <DatabaseDrawer
-               open={drawerOpen}
-               onClose={handleDrawerClose}
-               selectedNode={selectedNode}
-            />
+            {selectedNode && selectedNode.type === "category" && (
+               <CategoryDrawer
+                  open={drawerOpen}
+                  onClose={handleDrawerClose}
+                  selectedNode={selectedNode}
+               />
+            )}
+            {selectedNode && selectedNode.type !== "category" && (
+               <DatabaseDrawer
+                  open={drawerOpen}
+                  onClose={handleDrawerClose}
+                  selectedNode={selectedNode}
+               />
+            )}
          </Box>
       </div>
    );

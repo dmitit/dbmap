@@ -4,6 +4,9 @@ export interface DatabaseData {
    title: string;
    description: string;
    creation_year: number;
+   features: string[];
+   useCases: string[];
+   officialDocs: string;
 }
 
 export interface CategoryData {

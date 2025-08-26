@@ -36,8 +36,10 @@ export function transformStrapiNodes(strapiNodes: StrapiNode[]): Node[] {
             data: {
                title: componentData.title,
                description: componentData.description,
-               creation_year:
-                  componentData.creation_date || new Date().getFullYear(),
+               creation_year: componentData.creation_date,
+               features: componentData.features,
+               officialDocs: componentData.official_docs,
+               useCases: componentData.use_cases,
             },
          };
          transformedNodes.push(databaseNode);

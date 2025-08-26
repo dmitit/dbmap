@@ -13,6 +13,15 @@
     },
     "creation_year": {
       "type": "integer"
+    },
+    "features": {
+      "type": "json"
+    },
+    "use_cases": {
+      "type": "json"
+    },
+    "official_docs": {
+      "type": "string"
     }
   },
   "config": {}
