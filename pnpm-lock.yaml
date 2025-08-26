@@ -6,11 +6,7 @@ settings:
 
 importers:
 
-  .:
-    dependencies:
-      sonner:
-        specifier: ^2.0.7
-        version: 2.0.7(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+  .: {}
 
   packages/backend:
     dependencies:
@@ -84,6 +80,9 @@ importers:
       reactflow:
         specifier: ^11.11.4
         version: 11.11.4(@types/react@19.1.11)(immer@9.0.21)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      sonner:
+        specifier: ^2.0.7
+        version: 2.0.7(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       tailwind:
         specifier: ^4.0.0
         version: 4.0.0

@@ -1,7 +1,7 @@
 // Mock data representing a subset of your database hierarchy
 // This creates a manageable demo version while maintaining the structure
 
-export const mockNodes: FlowNode[] = [
+export const mockNodes = [
    {
       id: "root",
       type: "category",
